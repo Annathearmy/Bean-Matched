@@ -9,10 +9,15 @@ Key Variables: Extraction methods, additive habits, specialized equipment usage,
 🛠️ Technical Architecture & Implementation1. Feature Engineering: 
 Interaction TermsWe developed interaction features to capture non-linear relationships between a user's technical knowledge and their physical consumption habits.
 Coffee Maturity ($M$): Encodes the intersection of biological age and domain expertise:
-$$M = Age_{encoded} \times Expertise_{scalar}$$
+
+$$M = Age\_{encoded} \times Expertise_{scalar}$$
+
 Expert Intensity ($I$): A proxy for "Heavy User" segmentation, weighting daily volume by technical knowledge:
-$$I = Cups_{per\_day} \times Expertise_{scalar}$$
-Sweetened Behavior ($S$): A composite feature quantifying the "Masking Effect"—users who add milk, sugar, or syrup often prefer roasts with higher soluble solids (Medium/Dark) to maintain flavor balance:
+
+$$I = Cups\_{per\_day} \times Expertise_{scalar}$$
+
+Sweetened Behavior ($S$): A composite feature quantifying the "Masking Effect" users who add milk, sugar, or syrup often prefer roasts with higher soluble solids (Medium/Dark) to maintain flavor balance:
+
 $$S = \sum (\text{adds\_milk}, \text{adds\_sugar}, \text{adds\_syrup})$$
 
 Model Pipeline: XGBoost Modified
